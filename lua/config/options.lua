@@ -16,4 +16,9 @@ vim.opt.incsearch = true      -- Incremental search
 vim.opt.ignorecase = true     -- Ignore case in search
 vim.opt.smartcase = true      -- Override ignorecase if
 
-vim.api.nvim_set_keymap('n', 'q', ':noh<CR>', { noremap = true, silent = true })
+vim.opt.swapfile = false
+vim.opt.backup = false
+
+
+vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', 'cc', '"*y"', { noremap = true, silent = true })
